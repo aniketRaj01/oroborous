@@ -74,25 +74,6 @@
     });
   });
 
-  // optional embeds: nothing third-party loads until the visitor clicks
-  [].forEach.call(document.querySelectorAll('.acct'), function (card) {
-    var b = card.querySelector('.load-embed');
-    if (!b) return;
-    b.addEventListener('click', function () {
-      var f = document.createElement('iframe');
-      f.src = card.getAttribute('data-embed');
-      f.title = 'Live preview: ' + card.getAttribute('data-title');
-      f.loading = 'lazy';
-      f.referrerPolicy = 'strict-origin-when-cross-origin';
-      f.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
-      f.setAttribute('allow', 'encrypted-media; picture-in-picture');
-      var slot = card.querySelector('.embed-slot');
-      slot.textContent = '';
-      slot.style.border = '0';
-      slot.appendChild(f);
-    });
-  });
-
   // reveal on scroll
   var items = [].slice.call(document.querySelectorAll('.reveal'));
   if ('IntersectionObserver' in window) {
