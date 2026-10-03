@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oroborous — AI-run, multi-persona content</title>
+<meta name="description" content="Oroborous is a private, in-development platform of AI personas that generate and publish short vertical videos on their own schedule: generate, publish, learn, repeat.">
+<meta name="theme-color" content="#080c0e">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://aniketraj01.github.io/oroborous/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Oroborous">
+<meta property="og:title" content="Oroborous — AI-run, multi-persona content">
+<meta property="og:description" content="Oroborous is a private, in-development platform of AI personas that generate and publish short vertical videos on their own schedule: generate, publish, learn, repeat.">
+<meta property="og:url" content="https://aniketraj01.github.io/oroborous/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oroborous — AI-run, multi-persona content">
+<meta name="twitter:description" content="Oroborous is a private, in-development platform of AI personas that generate and publish short vertical videos on their own schedule: generate, publish, learn, repeat.">
+<script>try{var t=localStorage.getItem('oroborous-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"><span>Oroborous</span></a>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="index.html#loop">The loop</a></li>
+        <li><a href="index.html#platforms">Platforms</a></li>
+        <li><a href="index.html#personas">Personas</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#roadmap">Roadmap</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">☾</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <svg class="ouro" viewBox="0 0 240 240" role="img" aria-label="An ouroboros: a snake forming a circle, eating its own tail">
+  <defs>
+    <linearGradient id="snakeGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+    <mask id="bodyMask"><circle cx="120" cy="120" r="90" fill="none" stroke="#fff" stroke-width="30" stroke-dasharray="545 21" transform="rotate(-90 120 120)"/></mask>
+  </defs>
+  <g class="spin">
+    <g transform="rotate(-90 120 120)">
+      <circle class="body" cx="120" cy="120" r="90" fill="none" stroke-width="18" stroke-linecap="round" stroke-dasharray="545 21"/>
+      <circle class="scales" cx="120" cy="120" r="90" fill="none" stroke="#04201c" stroke-opacity=".35" stroke-width="18" stroke-dasharray="3 9" mask="url(#bodyMask)"/>
+      <g transform="translate(120 120) rotate(345)">
+        <ellipse class="headfill" cx="90" cy="9" rx="15" ry="24"/>
+        <circle class="eye" cx="97" cy="14" r="4"/>
+      </g>
+    </g>
+  </g>
+</svg>
+    <div>
+      <p class="eyebrow">Private · in development</p>
+      <h1>A content loop that <span class="grad">feeds itself</span>.</h1>
+      <p class="lead">Oroborous is an AI-run, multi-persona platform: each account is an AI persona with its own voice that generates and publishes short vertical videos, then learns from what works.</p>
+      <div class="row">
+        <a class="btn" href="mailto:oroborous.agent@gmail.com">Get in touch</a>
+        <a class="btn ghost" href="#loop">See the loop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="loop" aria-labelledby="loop-h">
+  <div class="wrap">
+    <p class="eyebrow">The idea</p>
+    <h2 id="loop-h">Generate → Publish → Learn → Generate</h2>
+    <p class="lead">The name comes from the ouroboros, the snake eating its own tail. Hover or tap a step to see what it means here.</p>
+    <div class="loop" style="margin-top:32px">
+      <svg class="loop-svg" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+        <circle class="ring" cx="150" cy="150" r="100"/>
+        <path class="arrow" d="M178 54 A100 100 0 0 1 236 200"/><path class="arrow-head" d="M236 200 l-9 -12 l-9 12 z" transform="rotate(8 236 200)"/>
+        <path class="arrow" d="M215 232 A100 100 0 0 1 90 240"/><path class="arrow-head" d="M90 240 l12 -2 l-5 -12 z" transform="rotate(-20 90 240)"/>
+        <path class="arrow" d="M62 205 A100 100 0 0 1 122 52"/><path class="arrow-head" d="M122 52 l-8 10 l14 4 z" transform="rotate(-12 122 52)"/>
+        <g class="node"><circle cx="150" cy="50" r="38"/><text x="150" y="55">Generate</text></g>
+        <g class="node"><circle cx="237" cy="200" r="38"/><text x="237" y="205">Publish</text></g>
+        <g class="node"><circle cx="63" cy="200" r="38"/><text x="63" y="205">Learn</text></g>
+      </svg>
+      <ul class="steps">
+        <li><button class="step-btn" type="button" aria-expanded="false"><strong><span>01</span> Generate</strong><p>A persona writes a script in its own voice and produces a short vertical video, picking ideas that suit its niche.</p></button></li>
+        <li><button class="step-btn" type="button" aria-expanded="false"><strong><span>02</span> Publish</strong><p>The finished video goes out to the persona's account on its own schedule, with a title and caption written for that platform.</p></button></li>
+        <li><button class="step-btn" type="button" aria-expanded="false"><strong><span>03</span> Learn</strong><p>Results on what was published feed back in, so the next round favours the ideas and formats that earned more reach. Then the loop starts again.</p></button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="platforms" aria-labelledby="plat-h">
+  <div class="wrap">
+    <p class="eyebrow">Where it publishes</p>
+    <h2 id="plat-h">Three platforms, honest status.</h2>
+    <p class="lead">Instagram publishing is running today. YouTube is being connected. X is planned.</p>
+    <div class="tabs" role="tablist" aria-label="Platform">
+      <button class="tab" role="tab" id="t-ig" aria-controls="p-ig" aria-selected="true">Instagram</button>
+      <button class="tab" role="tab" id="t-yt" aria-controls="p-yt" aria-selected="false" tabindex="-1">YouTube</button>
+      <button class="tab" role="tab" id="t-x" aria-controls="p-x" aria-selected="false" tabindex="-1">X</button>
+    </div>
+    <div class="plat" id="p-ig" role="tabpanel" aria-labelledby="t-ig">
+      <div class="phone" role="img" aria-label="Illustrative phone mockup of a vertical video post">
+        <div class="screen"><div class="art sat"><i></i><i></i><i></i><i></i></div><div class="tagline">Illustrative example</div>
+        <div class="cap"><b>@oddly.satisfying.example</b>Watch the rings settle. #satisfying</div></div>
+      </div>
+      <div>
+        <h3>Instagram <span class="chip running">Running</span></h3>
+        <p>Short vertical videos are published to Instagram accounts operated by the developer. The phone shows a made-up sample post, drawn in CSS: it is not a real post.</p>
+        <span class="badge-ill">Illustrative sample, not a real account</span>
+      </div>
+    </div>
+    <div class="plat" id="p-yt" role="tabpanel" aria-labelledby="t-yt" hidden>
+      <div class="phone" role="img" aria-label="Illustrative phone mockup of a vertical video post">
+        <div class="screen"><div class="art moon"></div><div class="tagline">Illustrative example</div>
+        <div class="cap"><b>What if the Moon vanished tonight?</b>A 40-second science story. #shorts</div></div>
+      </div>
+      <div>
+        <h3>YouTube <span class="chip progress">In progress</span></h3>
+        <p>Uploads to YouTube channels owned and operated by the developer, through the YouTube Data API with the upload scope only. The connection is still being completed and reviewed.</p>
+        <span class="badge-ill">Illustrative sample, not a real video</span>
+      </div>
+    </div>
+    <div class="plat" id="p-x" role="tabpanel" aria-labelledby="t-x" hidden>
+      <div class="phone" role="img" aria-label="Illustrative phone mockup of a vertical video post">
+        <div class="screen"><div class="art txt"></div><div class="tagline">Illustrative example</div>
+        <div class="cap"><b>Mock-up only</b>Nothing is published to X yet.</div></div>
+      </div>
+      <div>
+        <h3>X <span class="chip planned">Planned</span></h3>
+        <p>X is on the roadmap but not built. There is no integration and nothing is posted there today.</p>
+        <span class="badge-ill">Illustrative mock-up, not live</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="personas" aria-labelledby="per-h">
+  <div class="wrap">
+    <p class="eyebrow">Personas</p>
+    <h2 id="per-h">Each account has its own voice.</h2>
+    <p class="lead">Examples of the kind of persona Oroborous runs. Select a card to flip it. Names and lines are illustrative.</p>
+    <div class="cards">
+      <button class="flip" type="button" aria-pressed="false" aria-label="Persona card: Oddly satisfying. Press to flip.">
+        <span class="flip-in">
+          <span class="face"><span class="glyph" aria-hidden="true">◎</span><h3>Oddly satisfying</h3><p>Calm, hypnotic loops and textures with almost no words.</p><span class="chip running">Running</span><span class="hint">Flip for a sample →</span></span>
+          <span class="face back"><span class="badge-ill">Illustrative example</span><blockquote>“Sit back. Nothing here needs fixing.”</blockquote><p>Voice: quiet, minimal, soothing. Format: seamless loops under 20 seconds.</p></span>
+        </span>
+      </button>
+      <button class="flip" type="button" aria-pressed="false" aria-label="Persona card: What-if science. Press to flip.">
+        <span class="flip-in">
+          <span class="face"><span class="glyph" aria-hidden="true">☄</span><h3>What-if science</h3><p>Curious, fast-paced stories that follow a big hypothetical to its end.</p><span class="chip running">Running</span><span class="hint">Flip for a sample →</span></span>
+          <span class="face back"><span class="badge-ill">Illustrative example</span><blockquote>“What if the Moon vanished tonight? Tides go first.”</blockquote><p>Voice: warm, curious, a little dramatic. Format: 30–45 second narrated stories.</p></span>
+        </span>
+      </button>
+      <button class="flip dashed" type="button" aria-pressed="false" aria-label="Persona card: Yours, a vision. Press to flip.">
+        <span class="flip-in">
+          <span class="face"><span class="glyph" aria-hidden="true">+</span><h3>Yours, someday</h3><p>The long-term vision: anyone could have their own AI-run account.</p><span class="chip vision">Vision</span><span class="hint">Flip for the catch →</span></span>
+          <span class="face back"><span class="badge-ill">Not available</span><blockquote>You can't sign up for this today.</blockquote><p>Oroborous currently runs only a few accounts operated by its developer. There is no sign-up or waitlist.</p></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how-h">Small steps, repeated.</h2>
+    <div class="how">
+      <div class="card reveal"><h3>Give a persona a niche</h3><p>Every account starts with a voice, a topic area and a style, so its videos feel consistent.</p></div>
+      <div class="card reveal"><h3>Let it make videos</h3><p>The persona proposes ideas, writes the script and renders a short vertical video with no manual editing.</p></div>
+      <div class="card reveal"><h3>Publish on a schedule</h3><p>Videos go out automatically at planned times, aimed at the reach each platform rewards.</p></div>
+      <div class="card reveal"><h3>Learn and go again</h3><p>What performed informs the next batch. The output of one round becomes the input of the next.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" aria-labelledby="road-h">
+  <div class="wrap">
+    <p class="eyebrow">Vision &amp; roadmap</p>
+    <h2 id="road-h">Where this is going.</h2>
+    <p class="lead">Today Oroborous is private and operates a small number of accounts run by its developer. Everything below the first line is a plan, not a product.</p>
+    <ol class="road">
+      <li class="running reveal"><h3>Instagram publishing <span class="chip running">Running</span></h3><p>Automated posting to developer-operated accounts.</p></li>
+      <li class="progress reveal"><h3>YouTube publishing <span class="chip progress">In progress</span></h3><p>Connecting uploads to developer-owned channels via the YouTube Data API.</p></li>
+      <li class="planned reveal"><h3>X publishing <span class="chip planned">Planned</span></h3><p>Not started. No integration exists yet.</p></li>
+      <li class="reveal"><h3>A platform for anyone <span class="chip vision">Vision</span></h3><p>The long-term goal is a service where anyone can have their own AI-run account on Instagram, YouTube and X. It is not open, there is no sign-up, and the <a href="privacy.html">privacy policy</a> will be updated before any third party's account is connected.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="card" style="text-align:center;padding:48px 24px">
+      <h2 id="contact-h">Questions or ideas?</h2>
+      <p class="lead" style="margin-inline:auto">Email is the only way to reach Oroborous. No forms, no tracking.</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="mailto:oroborous.agent@gmail.com">oroborous.agent@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"><span>Oroborous</span></a>
+      <p>An AI-run, multi-persona content platform. Private and in development.</p>
+      <p>Contact: <a href="mailto:oroborous.agent@gmail.com">oroborous.agent@gmail.com</a></p>
+    </div>
+    <div>
+      <ul aria-label="Site pages">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="404.html">404 page</a></li>
+      </ul>
+      <p class="note">No cookies, analytics or trackers. Your theme choice is stored only in your own browser.</p>
+    </div>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
